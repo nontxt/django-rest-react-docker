@@ -3,10 +3,12 @@ Simple table app for User and Group tables.
 
 
 The filter API provides two main methods
+
 Filter - filters based on query.
 Exclude - same as filter but excludes items based on the query, to use it you need to use the "exclude_" prefix before the query, e.g. "exclude_exact".
 
 Queries and types
+
 Supported data type for all queries (except any) str.
 exact - exact match (for each field)
 from - starting from (for id and create fields)
