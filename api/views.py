@@ -89,7 +89,7 @@ class FilterView(GenericAPIView):
         self.query['filter'].clear()
         self.query['exclude'].clear()
         match request.data:
-            case {'table': 'users' | 'groups' as table, 'filter': [*_] as filter_list}:
+            case {'table': 'users' | 'groups' as table, 'filter': [{}, *_] as filter_list}:
                 self.table = table
                 for f in filter_list:
                     method = 'filter'
@@ -98,6 +98,9 @@ class FilterView(GenericAPIView):
                               'filter_function': str() as filter_function,
                               'filter_input': str() | [*_] as filter_input} \
                         if field.strip() != '' and filter_function.strip() != '':  # Guard
+
+                            if field == 'id' and not filter_input.isdigit():
+                                raise ParseError('Incorrect input.')
 
                             if 'exclude' in filter_function:
                                 match filter_function.split('_'):
@@ -124,7 +127,7 @@ class FilterView(GenericAPIView):
 
                     self.query[method][lookup] = filter_input
             case _:
-                raise ParseError('Incorrect table.')
+                raise ParseError('Incorrect table or empty filter list.')
 
         try:
             queryset = self.get_queryset()
