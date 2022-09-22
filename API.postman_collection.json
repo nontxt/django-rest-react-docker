@@ -1,0 +1,2303 @@
+{
+	"info": {
+		"_postman_id": "e1eb29cc-2d97-47ab-8ba3-f9c49573bb84",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23404236"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"TestUsername\",\n    \"group\": \"TestGroup\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/users/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"TestUsername\",\n    \"group\": \"TestGroup\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/users/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"users",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:11:24 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "76"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"group\": \"TestGroup\",\n    \"username\": \"TestUsername\",\n    \"create\": \"2022-09-22\"\n}"
+								}
+							]
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/users/1/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"users",
+										"1",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "detail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base}}/users/1/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"users",
+												"1",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:11:52 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "76"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"group\": \"TestGroup\",\n    \"username\": \"TestUsername\",\n    \"create\": \"2022-09-22\"\n}"
+								}
+							]
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"TestUsernameNew\",\n    \"group\": \"TestGroup\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/users/1/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"users",
+										"1",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "edit",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"TestUsernameNew\",\n    \"group\": \"TestGroup\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/users/1/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"users",
+												"1",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:12:18 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "79"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"group\": \"TestGroup\",\n    \"username\": \"TestUsernameNew\",\n    \"create\": \"2022-09-22\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/users/1/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"users",
+										"1",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base}}/users/1/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"users",
+												"1",
+												""
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:12:37 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/users/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base}}/users/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"users",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:11:39 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "78"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"group\": \"TestGroup\",\n        \"username\": \"TestUsername\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "groups",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"TestGroup\",\n    \"description\": \"Description for test group.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/groups/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"groups",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"TestGroup\",\n    \"description\": \"Description for test group.\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/groups/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"groups",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:10:20 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "71"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"name\": \"TestGroup\",\n    \"description\": \"Description for test group.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "detail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base}}/groups/1/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"groups",
+										"1",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "detail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{base}}/groups/1/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"groups",
+												"1",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:10:56 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "71"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"name\": \"TestGroup\",\n    \"description\": \"Description for test group.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"TestGroupNew\",\n    \"description\": \"(UPD) Description for test group.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/groups/1/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"groups",
+										"1",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "edit",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"TestGroupNew\",\n    \"description\": \"(UPD) Description for test group.\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/groups/1/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"groups",
+												"1",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:14:14 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "80"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"name\": \"TestGroupNew\",\n    \"description\": \"(UPD) Description for test group.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/groups/1/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"groups",
+										"1",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base}}/groups/1/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"groups",
+												"1",
+												""
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:15:02 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/groups/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"groups",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base}}/groups/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"groups",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:13:24 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "73"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"TestGroup\",\n        \"description\": \"Description for test group.\"\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Filter",
+			"item": [
+				{
+					"name": "Bad requests",
+					"item": [
+						{
+							"name": "wrong table",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"tester\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"like\",\n            \"filter_input\": \"test\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "wrong table",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"tester\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"like\",\n            \"filter_input\": \"test\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:34:11 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "50"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"detail\": \"Incorrect table or empty filter list.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "unexpected filter function",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"for\",\n            \"filter_input\": \"you\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "unexpected filter function",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"for\",\n            \"filter_input\": \"you\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:34:34 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "58"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"detail\": \"Incorrect field 'username' or function 'for'.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "unexpected filter field",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"product\",\n            \"filter_function\": \"exact\",\n            \"filter_input\": \"you\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "unexpected filter field",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"product\",\n            \"filter_function\": \"exact\",\n            \"filter_input\": \"you\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:34:51 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"detail\": \"Incorrect field 'product' or function 'exact'.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "unexpected filter input type",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"exact\",\n            \"filter_input\": [\"User\"]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "unexpected filter input type",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"exact\",\n            \"filter_input\": [\"User\"]\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:35:04 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "29"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"detail\": \"Incorrect input.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "empty filter list",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "empty filter list",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": []\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 06:35:20 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "50"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"detail\": \"Incorrect table or empty filter list.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "query",
+					"item": [
+						{
+							"name": "exact",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"exact\",\n            \"filter_input\": \"User\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "exact",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"exact\",\n            \"filter_input\": \"User\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 07:17:16 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "66"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 4,\n        \"group\": \"Users\",\n        \"username\": \"User\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "like",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"like\",\n            \"filter_input\": \"u\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "like",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"like\",\n            \"filter_input\": \"u\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 07:18:07 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "66"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 4,\n        \"group\": \"Users\",\n        \"username\": \"User\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "any",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"any\",\n            \"filter_input\": [\"User\", \"Gamer\", \"Tester\", \"whoisit?\"]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "any",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"any\",\n            \"filter_input\": [\"User\", \"Gamer\", \"Tester\", \"whoisit?\"]\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 07:19:57 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "201"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 3,\n        \"group\": \"Gamers\",\n        \"username\": \"Gamer\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 2,\n        \"group\": \"Tester\",\n        \"username\": \"Tester\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 4,\n        \"group\": \"Users\",\n        \"username\": \"User\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "start",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"start\",\n            \"filter_input\": \"u\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "start",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"start\",\n            \"filter_input\": \"u\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 07:21:43 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "66"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 4,\n        \"group\": \"Users\",\n        \"username\": \"User\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "end",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"end\",\n            \"filter_input\": \"r\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "end",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"end\",\n            \"filter_input\": \"r\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 07:22:08 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "267"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 2,\n        \"group\": \"Tester\",\n        \"username\": \"Tester\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 3,\n        \"group\": \"Gamers\",\n        \"username\": \"Gamer\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 4,\n        \"group\": \"Users\",\n        \"username\": \"User\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 5,\n        \"group\": \"Users\",\n        \"username\": \"peter\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "from",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"id\",\n            \"filter_function\": \"from\",\n            \"filter_input\": \"2\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "from",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"id\",\n            \"filter_function\": \"from\",\n            \"filter_input\": \"2\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 07:30:35 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "401"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 2,\n        \"group\": \"Tester\",\n        \"username\": \"Tester\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 3,\n        \"group\": \"Gamers\",\n        \"username\": \"Gamer\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 4,\n        \"group\": \"Users\",\n        \"username\": \"User\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 5,\n        \"group\": \"Users\",\n        \"username\": \"peter\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 6,\n        \"group\": \"Gamers\",\n        \"username\": \"sam\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 7,\n        \"group\": \"Tester\",\n        \"username\": \"phil123\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "until",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"id\",\n            \"filter_function\": \"until\",\n            \"filter_input\": \"5\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "until",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"id\",\n            \"filter_function\": \"until\",\n            \"filter_input\": \"5\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base}}/filter/",
+											"host": [
+												"{{base}}"
+											],
+											"path": [
+												"filter",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 22 Sep 2022 07:30:55 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.6"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "267"
+										},
+										{
+											"key": "Vary",
+											"value": "Cookie, Origin"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 2,\n        \"group\": \"Tester\",\n        \"username\": \"Tester\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 3,\n        \"group\": \"Gamers\",\n        \"username\": \"Gamer\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 4,\n        \"group\": \"Users\",\n        \"username\": \"User\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 5,\n        \"group\": \"Users\",\n        \"username\": \"peter\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "combine filter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"like\",\n            \"filter_input\": \"e\"\n        },\n        {\n            \"field\": \"group\",\n            \"filter_function\": \"end\",\n            \"filter_input\": \"ers\"\n        },\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"exclude_exact\",\n            \"filter_input\": \"peter\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/filter/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"filter",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "combine filter",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"table\": \"users\",\n    \"filter\": [\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"like\",\n            \"filter_input\": \"e\"\n        },\n        {\n            \"field\": \"group\",\n            \"filter_function\": \"end\",\n            \"filter_input\": \"ers\"\n        },\n        {\n            \"field\": \"username\",\n            \"filter_function\": \"exclude_exact\",\n            \"filter_input\": \"peter\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base}}/filter/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"filter",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 07:16:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "133"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie, Origin"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"group\": \"Gamers\",\n        \"username\": \"Gamer\",\n        \"create\": \"2022-09-22\"\n    },\n    {\n        \"id\": 4,\n        \"group\": \"Users\",\n        \"username\": \"User\",\n        \"create\": \"2022-09-22\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "### The filter API provides two main methods\n\n1.  **Filter** - filters based on query.\n2.  **Exclude -** same as filter but excludes items based on the query, to use it you need to use the \"**exclude_**\" prefix before the query, e.g. _\"exclude_exact\"_.\n    \n\n### Queries and types\n\nSupported data type for all queries (except any) str.\n\n1.  **exact -** exact match (for each field)\n2.  **from -** starting from (for id and create fields)\n3.  **until -** ending with (for id and create fields)\n4.  **like -** can include case-insensitive (for all fields except id and create)\n5.  **any -** any of the list (all fields except id and create) supported data type list \\[\\]\n6.  _**start**_ _\\- start with (everything except id and created)_ case-insensitive\n7.  **end** - end with (everything except id and created) case-insensitive\n    \n\nInput for Id field must not contain letters."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "localhost:8000/api",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
